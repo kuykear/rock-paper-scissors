@@ -4,7 +4,7 @@
 //  -scissors
 //RETURN: Computers selection
 
-let playerSelection = "paper";
+let playerSelection = "";
 let computerSelection;
 let computerScore = 0;
 let playerScore = 0;
@@ -62,10 +62,11 @@ function playRound(playerSelection){
 
 function game(){
     for (let i = 0; i<5; i++){
+        playerSelection = prompt("Rock, Paper, or Scissors?");
         winner = playRound(playerSelection);
         console.log(winner);
-        console.log(playerScore);
-        console.log(computerScore);
+        console.log("Player: " + playerScore);
+        console.log("Computer: " + computerScore);
     }
     switch(true){
         case playerScore > computerScore:
